@@ -1,0 +1,98 @@
+package proyecto;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class DialogoVender extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel contentPanel = new JPanel();
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JScrollPane scrollPane;
+	private JTextArea textArea;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			DialogoVender dialog = new DialogoVender();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public DialogoVender() {
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JButton btnNewButton = new JButton("New button");
+			btnNewButton.setBounds(318, 29, 89, 23);
+			contentPanel.add(btnNewButton);
+		}
+		{
+			JButton btnNewButton = new JButton("New button");
+			btnNewButton.setBounds(318, 63, 89, 23);
+			contentPanel.add(btnNewButton);
+		}
+		{
+			textField = new JTextField();
+			textField.setBounds(161, 30, 86, 20);
+			contentPanel.add(textField);
+			textField.setColumns(10);
+		}
+		{
+			textField_1 = new JTextField();
+			textField_1.setColumns(10);
+			textField_1.setBounds(161, 64, 86, 20);
+			contentPanel.add(textField_1);
+		}
+		{
+			textField_2 = new JTextField();
+			textField_2.setColumns(10);
+			textField_2.setBounds(161, 95, 86, 20);
+			contentPanel.add(textField_2);
+		}
+		{
+			JLabel lblNewLabel = new JLabel("New label");
+			lblNewLabel.setBounds(29, 33, 46, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			JLabel lblNewLabel = new JLabel("New label");
+			lblNewLabel.setBounds(29, 67, 46, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			JLabel lblNewLabel = new JLabel("New label");
+			lblNewLabel.setBounds(29, 98, 46, 14);
+			contentPanel.add(lblNewLabel);
+		}
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(29, 136, 378, 114);
+		contentPanel.add(scrollPane);
+		
+		textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+	}
+}

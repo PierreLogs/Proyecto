@@ -1,0 +1,69 @@
+package proyecto;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class FrameMenuPrincipal extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JMenuBar menuProyecto;
+	private JMenu mnArchivo;
+	private JMenuItem mnmntmSalir;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FrameMenuPrincipal frame = new FrameMenuPrincipal();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FrameMenuPrincipal() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		menuProyecto = new JMenuBar();
+		menuProyecto.setBounds(0, 0, 434, 22);
+		contentPane.add(menuProyecto);
+		
+		mnArchivo = new JMenu("Archivo");
+		menuProyecto.add(mnArchivo);
+		
+		mnmntmSalir = new JMenuItem("Salir");
+		mnmntmSalir.addActionListener(this);
+		mnArchivo.add(mnmntmSalir);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == mnmntmSalir) {
+			actionPerformedMnmntmSalir(e);
+		}
+	}
+	protected void actionPerformedMnmntmSalir(ActionEvent e) {
+		System.exit(0);
+	}
+}

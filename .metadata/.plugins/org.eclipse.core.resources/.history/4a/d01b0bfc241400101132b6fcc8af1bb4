@@ -1,0 +1,127 @@
+package proyecto;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.UIManager;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class DialogoMantenimientoModificar extends JDialog implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel txtAlmacenamiento = new JPanel();
+	private JLabel lblModelo;
+	private JLabel lblProcesador;
+	private JLabel lblMemoriaRam;
+	private JLabel lblAlmacenamiento;
+	private JLabel lblSistemaOperativo;
+	private JTextField txtProcesador;
+	private JTextField txtModelo;
+	private JTextField txtMemoriaRam;
+	private JTextField textField_3;
+	private JTextField txtSistemaOperativo;
+	private JButton btnCerrar;
+	private JButton btnGuardar;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		try {
+			DialogoMantenimientoModificar dialog = new DialogoMantenimientoModificar();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public DialogoMantenimientoModificar() {
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		txtAlmacenamiento.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(txtAlmacenamiento, BorderLayout.CENTER);
+		txtAlmacenamiento.setLayout(null);
+		
+		lblModelo = new JLabel("Modelo\r\n");
+		lblModelo.setFont(new Font("Yu Gothic Medium", Font.BOLD, 11));
+		lblModelo.setBounds(22, 42, 46, 14);
+		txtAlmacenamiento.add(lblModelo);
+		
+		lblProcesador = new JLabel("Procesador\r\n");
+		lblProcesador.setFont(UIManager.getFont("TextPane.font"));
+		lblProcesador.setBounds(22, 81, 65, 14);
+		txtAlmacenamiento.add(lblProcesador);
+		
+		lblMemoriaRam = new JLabel("Memoria RAM (GB)");
+		lblMemoriaRam.setBounds(22, 124, 106, 14);
+		txtAlmacenamiento.add(lblMemoriaRam);
+		
+		lblAlmacenamiento = new JLabel("Almacenamiento (GB)");
+		lblAlmacenamiento.setBounds(22, 165, 106, 14);
+		txtAlmacenamiento.add(lblAlmacenamiento);
+		
+		lblSistemaOperativo = new JLabel("Sistema Operativo\r\n\r\n");
+		lblSistemaOperativo.setBounds(22, 209, 95, 14);
+		txtAlmacenamiento.add(lblSistemaOperativo);
+		
+		txtProcesador = new JTextField();
+		txtProcesador.setColumns(10);
+		txtProcesador.setBounds(148, 78, 145, 20);
+		txtAlmacenamiento.add(txtProcesador);
+		
+		txtModelo = new JTextField();
+		txtModelo.setColumns(10);
+		txtModelo.setBounds(148, 39, 145, 20);
+		txtAlmacenamiento.add(txtModelo);
+		
+		txtMemoriaRam = new JTextField();
+		txtMemoriaRam.setColumns(10);
+		txtMemoriaRam.setBounds(148, 121, 145, 20);
+		txtAlmacenamiento.add(txtMemoriaRam);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(148, 162, 145, 20);
+		txtAlmacenamiento.add(textField_3);
+		
+		txtSistemaOperativo = new JTextField();
+		txtSistemaOperativo.setColumns(10);
+		txtSistemaOperativo.setBounds(148, 206, 145, 20);
+		txtAlmacenamiento.add(txtSistemaOperativo);
+		
+		btnCerrar = new JButton("Cerrar");
+		btnCerrar.addActionListener(this);
+		btnCerrar.setBounds(321, 38, 89, 23);
+		txtAlmacenamiento.add(btnCerrar);
+		
+		btnGuardar = new JButton("Guardar");
+		btnGuardar.addActionListener(this);
+		btnGuardar.setBounds(321, 72, 89, 23);
+		txtAlmacenamiento.add(btnGuardar);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnCerrar) {
+			actionPerformedBtnNewButton(e);
+		}
+		if (e.getSource() == btnGuardar) {
+			actionPerformedBtnNewButton_1(e);
+		}
+	}
+	protected void actionPerformedBtnNewButton_1(ActionEvent e) {
+	}
+	protected void actionPerformedBtnNewButton(ActionEvent e) {
+	}
+}

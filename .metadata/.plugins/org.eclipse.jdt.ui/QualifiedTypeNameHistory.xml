@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="proyecto.DialogoMantenimiento"/>
+    <fullyQualifiedTypeName name="proyecto.DialogoMantenimientoListar"/>
+    <fullyQualifiedTypeName name="proyecto.DialogoConfigurarObsequios"/>
+    <fullyQualifiedTypeName name="proyecto.DialogoConfigurarDescuentos"/>
+    <fullyQualifiedTypeName name="proyecto.DialogoVender"/>
+</qualifiedTypeNameHistroy>
