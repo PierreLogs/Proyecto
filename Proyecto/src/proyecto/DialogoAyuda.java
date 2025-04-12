@@ -64,28 +64,34 @@ public class DialogoAyuda extends JDialog {
 		panel.setLayout(null);
 		
 		JLabel lblTitle = DefaultComponentFactory.getInstance().createLabel("Grupo");
+		lblTitle.setForeground(new Color(88, 11, 12));
 		lblTitle.setFont(new Font("FiraMono Nerd Font", Font.BOLD, 15));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitle.setBounds(188, 12, 76, 27);
 		panel.add(lblTitle);
 		
 		JLabel lblPartner1 = new JLabel("Gelber Paolo Lozano Huangal ");
+		lblPartner1.setForeground(new Color(88, 11, 12));
 		lblPartner1.setBounds(142, 51, 181, 17);
 		panel.add(lblPartner1);
 		
 		JLabel lblPartner2 = new JLabel("Katia Katherine de la Torre Lorenzo");
+		lblPartner2.setForeground(new Color(88, 11, 12));
 		lblPartner2.setBounds(142, 72, 221, 17);
 		panel.add(lblPartner2);
 		
 		JLabel lblPartner3 = new JLabel("Walter Jose Ca\u00F1apata\u00F1a Vargas");
+		lblPartner3.setForeground(new Color(88, 11, 12));
 		lblPartner3.setBounds(142, 96, 221, 17);
 		panel.add(lblPartner3);
 		
 		JLabel lblPartner4 = new JLabel("Luis Pierre Oscco Lara");
+		lblPartner4.setForeground(new Color(88, 11, 12));
 		lblPartner4.setBounds(142, 118, 221, 17);
 		panel.add(lblPartner4);
 		
 		JLabel lblPartner5 = new JLabel("Gianfranco Paolo Rebatta Morales");
+		lblPartner5.setForeground(new Color(88, 11, 12));
 		lblPartner5.setBounds(142, 141, 221, 17);
 		panel.add(lblPartner5);
 		

@@ -10,6 +10,11 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.JLabel;
+import com.jgoodies.forms.factories.DefaultComponentFactory;
+import java.awt.Font;
+import javax.swing.SwingConstants;
 
 public class FrameMenuPrincipal extends JFrame implements ActionListener {
 
@@ -50,17 +55,17 @@ public class FrameMenuPrincipal extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public FrameMenuPrincipal() {
-		setTitle("Byte Store");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(174, 174, 174));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		menuProyecto = new JMenuBar();
-		menuProyecto.setBounds(0, 0, 434, 22);
+		menuProyecto.setBounds(0, 0, 450, 22);
 		contentPane.add(menuProyecto);
 		
 		mnArchivo = new JMenu("Archivo");
@@ -109,6 +114,26 @@ public class FrameMenuPrincipal extends JFrame implements ActionListener {
 		mntmAyuda = new JMenuItem("Nosotros\r\n");
 		mntmAyuda.addActionListener(this);
 		mnAyuda.add(mntmAyuda);
+		
+		JLabel lblNewJgoodiesTitle = DefaultComponentFactory.getInstance().createTitle("\u00A1Bienvenido a Bite Store!");
+		lblNewJgoodiesTitle.setForeground(new Color(88, 11, 12));
+		lblNewJgoodiesTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewJgoodiesTitle.setFont(new Font("FiraMono Nerd Font", Font.BOLD, 24));
+		lblNewJgoodiesTitle.setBounds(38, 127, 386, 60);
+		contentPane.add(lblNewJgoodiesTitle);
+		
+		JLabel lblSubTitle = new JLabel("Brindamos las mejores ofertas en equipos de computo");
+		lblSubTitle.setForeground(new Color(88, 11, 12));
+		lblSubTitle.setBackground(new Color(88, 11, 12));
+		lblSubTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSubTitle.setBounds(71, 192, 338, 39);
+		contentPane.add(lblSubTitle);
+		
+		JLabel lblNewLabel = new JLabel("V1.0");
+		lblNewLabel.setForeground(new Color(88, 11, 12));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(204, 254, 60, 17);
+		contentPane.add(lblNewLabel);
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == mntmAyuda) {

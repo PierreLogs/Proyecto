@@ -12,6 +12,7 @@ import javax.swing.UIManager;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class DialogoMantenimientoModificar extends JDialog implements ActionListener {
 
@@ -49,65 +50,70 @@ public class DialogoMantenimientoModificar extends JDialog implements ActionList
 	public DialogoMantenimientoModificar() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
+		txtAlmacenamiento.setBackground(new Color(174, 174, 174));
 		txtAlmacenamiento.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(txtAlmacenamiento, BorderLayout.CENTER);
 		txtAlmacenamiento.setLayout(null);
 		
 		lblModelo = new JLabel("Modelo\r\n");
-		lblModelo.setFont(new Font("Yu Gothic Medium", Font.BOLD, 11));
-		lblModelo.setBounds(22, 42, 46, 14);
+		lblModelo.setFont(new Font("FiraMono Nerd Font", Font.BOLD, 12));
+		lblModelo.setBounds(22, 42, 135, 14);
 		txtAlmacenamiento.add(lblModelo);
 		
 		lblProcesador = new JLabel("Procesador\r\n");
-		lblProcesador.setFont(UIManager.getFont("TextPane.font"));
-		lblProcesador.setBounds(22, 81, 65, 14);
+		lblProcesador.setFont(new Font("FiraMono Nerd Font", Font.BOLD, 12));
+		lblProcesador.setBounds(22, 81, 135, 14);
 		txtAlmacenamiento.add(lblProcesador);
 		
 		lblMemoriaRam = new JLabel("Memoria RAM (GB)");
-		lblMemoriaRam.setBounds(22, 124, 106, 14);
+		lblMemoriaRam.setBounds(22, 124, 135, 14);
 		txtAlmacenamiento.add(lblMemoriaRam);
 		
 		lblAlmacenamiento = new JLabel("Almacenamiento (GB)");
-		lblAlmacenamiento.setBounds(22, 165, 106, 14);
+		lblAlmacenamiento.setBounds(22, 165, 135, 14);
 		txtAlmacenamiento.add(lblAlmacenamiento);
 		
 		lblSistemaOperativo = new JLabel("Sistema Operativo\r\n\r\n");
-		lblSistemaOperativo.setBounds(22, 209, 95, 14);
+		lblSistemaOperativo.setBounds(22, 209, 135, 14);
 		txtAlmacenamiento.add(lblSistemaOperativo);
 		
 		txtProcesador = new JTextField();
 		txtProcesador.setColumns(10);
-		txtProcesador.setBounds(148, 78, 145, 20);
+		txtProcesador.setBounds(192, 78, 145, 20);
 		txtAlmacenamiento.add(txtProcesador);
 		
 		txtModelo = new JTextField();
 		txtModelo.setColumns(10);
-		txtModelo.setBounds(148, 39, 145, 20);
+		txtModelo.setBounds(192, 38, 145, 20);
 		txtAlmacenamiento.add(txtModelo);
 		
 		txtMemoriaRam = new JTextField();
 		txtMemoriaRam.setColumns(10);
-		txtMemoriaRam.setBounds(148, 121, 145, 20);
+		txtMemoriaRam.setBounds(192, 121, 145, 20);
 		txtAlmacenamiento.add(txtMemoriaRam);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(148, 162, 145, 20);
+		textField_3.setBounds(192, 162, 145, 20);
 		txtAlmacenamiento.add(textField_3);
 		
 		txtSistemaOperativo = new JTextField();
 		txtSistemaOperativo.setColumns(10);
-		txtSistemaOperativo.setBounds(148, 206, 145, 20);
+		txtSistemaOperativo.setBounds(192, 206, 145, 20);
 		txtAlmacenamiento.add(txtSistemaOperativo);
 		
 		btnCerrar = new JButton("Cerrar");
+		btnCerrar.setForeground(new Color(255, 255, 255));
+		btnCerrar.setBackground(new Color(88, 11, 12));
 		btnCerrar.addActionListener(this);
-		btnCerrar.setBounds(321, 38, 89, 23);
+		btnCerrar.setBounds(349, 37, 89, 23);
 		txtAlmacenamiento.add(btnCerrar);
 		
 		btnGuardar = new JButton("Guardar");
+		btnGuardar.setForeground(new Color(255, 255, 255));
+		btnGuardar.setBackground(new Color(88, 11, 12));
 		btnGuardar.addActionListener(this);
-		btnGuardar.setBounds(321, 72, 89, 23);
+		btnGuardar.setBounds(349, 77, 89, 23);
 		txtAlmacenamiento.add(btnGuardar);
 	}
 
@@ -119,8 +125,9 @@ public class DialogoMantenimientoModificar extends JDialog implements ActionList
 			actionPerformedBtnNewButton_1(e);
 		}
 	}
-	protected void actionPerformedBtnNewButton_1(ActionEvent e) {
+protected void actionPerformedBtnNewButton_1(ActionEvent e) {
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
+		dispose();
 	}
 }
