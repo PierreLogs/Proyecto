@@ -18,7 +18,7 @@ Este proyecto es una aplicación de gestión de ventas de equipos de cómputo, d
 - **Java 21+** para la lógica.
 - **Pseudocódigo** documentado para explicar procesos clave.
 
-### 📝 Instegrantes:
+### 📝 Integrantes:
 
 - Gelver Paolo Lozano Huangal
 - Gianfranco Paolo Rebatta Morales
