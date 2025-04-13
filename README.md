@@ -1,10 +1,10 @@
 # Introducción a la algorimia - Proyecto Grupo 6
 
-## 🖥️ Proyecto de Venta de Equipos de Cómputo
+## 🖥️ Proyecto Byte Store
 
 ### 📌 Descripción
 
-Este proyecto es una aplicación de gestión de ventas de equipos de cómputo, desarrollada en **Java**. Implementa algoritmos eficientes para procesar pedidos, gestionar inventarios y calcular ofertas. También incluye pseudocódigos para facilitar la comprensión de la lógica aplicada.
+Este proyecto es una aplicación de gestión de ventas de equipos de cómputo, desarrollada en **Java**. Implementa algoritmos eficientes para procesar consultas, promociones, gestionar inventarios y calcular ofertas. También incluye pseudocódigos para facilitar la comprensión de la lógica aplicada.
 
 ### 🚀 Características
 
