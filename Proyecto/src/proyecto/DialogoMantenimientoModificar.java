@@ -17,7 +17,7 @@ import java.awt.Color;
 public class DialogoMantenimientoModificar extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	private final JPanel txtAlmacenamiento = new JPanel();
+	private final JPanel jpModificar = new JPanel();
 	private JLabel lblModelo;
 	private JLabel lblProcesador;
 	private JLabel lblMemoriaRam;
@@ -26,7 +26,7 @@ public class DialogoMantenimientoModificar extends JDialog implements ActionList
 	private JTextField txtProcesador;
 	private JTextField txtModelo;
 	private JTextField txtMemoriaRam;
-	private JTextField textField_3;
+	private JTextField txtAlmacenamiento;
 	private JTextField txtSistemaOperativo;
 	private JButton btnCerrar;
 	private JButton btnGuardar;
@@ -95,7 +95,7 @@ public class DialogoMantenimientoModificar extends JDialog implements ActionList
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
 		textField_3.setBounds(192, 162, 145, 20);
-		txtAlmacenamiento.add(textField_3);
+		txtAlmacenamiento.add(txtAlmacenamiento);
 		
 		txtSistemaOperativo = new JTextField();
 		txtSistemaOperativo.setColumns(10);
@@ -126,6 +126,7 @@ public class DialogoMantenimientoModificar extends JDialog implements ActionList
 		}
 	}
 protected void actionPerformedBtnNewButton_1(ActionEvent e) {
+	
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
 		dispose();

@@ -14,6 +14,8 @@ import javax.swing.UIManager;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class DialogoMantenimientoConsultar extends JDialog {
 
@@ -24,12 +26,11 @@ public class DialogoMantenimientoConsultar extends JDialog {
 	private JLabel lblMemoriaRam;
 	private JLabel lblAlmacenamiento;
 	private JLabel lblSistemaOperativo;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JButton btnNewButton;
+	private JTextField txtProcesador;
+	private JTextField txtRAM;
+	private JTextField txtHDD;
+	private JTextField txtOS;
+	private JButton btnCerrar;
 
 	/**
 	 * Launch the application.
@@ -78,40 +79,44 @@ public class DialogoMantenimientoConsultar extends JDialog {
 		lblSistemaOperativo.setBounds(24, 212, 117, 14);
 		contentPanel.add(lblSistemaOperativo);
 		
-		textField = new JTextField();
-		textField.setBounds(192, 81, 145, 20);
-		contentPanel.add(textField);
-		textField.setColumns(10);
+		txtProcesador = new JTextField();
+		txtProcesador.setBounds(192, 81, 145, 20);
+		contentPanel.add(txtProcesador);
+		txtProcesador.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(192, 42, 145, 20);
-		contentPanel.add(textField_1);
+		txtRAM = new JTextField();
+		txtRAM.setColumns(10);
+		txtRAM.setBounds(192, 124, 145, 20);
+		contentPanel.add(txtRAM);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(192, 124, 145, 20);
-		contentPanel.add(textField_2);
+		txtHDD = new JTextField();
+		txtHDD.setColumns(10);
+		txtHDD.setBounds(192, 165, 145, 20);
+		contentPanel.add(txtHDD);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(192, 165, 145, 20);
-		contentPanel.add(textField_3);
+		txtOS = new JTextField();
+		txtOS.setColumns(10);
+		txtOS.setBounds(192, 209, 145, 20);
+		contentPanel.add(txtOS);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(192, 209, 145, 20);
-		contentPanel.add(textField_4);
-		
-		btnNewButton = new JButton("Cerrar");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnCerrar = new JButton("Cerrar");
+		btnCerrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(88, 11, 12));
-		btnNewButton.setBounds(349, 41, 89, 23);
-		contentPanel.add(btnNewButton);
+		btnCerrar.setForeground(new Color(255, 255, 255));
+		btnCerrar.setBackground(new Color(88, 11, 12));
+		btnCerrar.setBounds(349, 41, 89, 23);
+		contentPanel.add(btnCerrar);
+		
+		JComboBox comboModelos = new JComboBox();
+		comboModelos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
+		comboModelos.setBounds(190, 39, 147, 26);
+		contentPanel.add(comboModelos);
 	}
 }
